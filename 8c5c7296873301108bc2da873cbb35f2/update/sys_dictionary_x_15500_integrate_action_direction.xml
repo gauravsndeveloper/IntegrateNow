@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="table" table="x_15500_integrate_integration">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="direction" table="x_15500_integrate_action">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>encode_utf8=false</attributes>
+        <attributes/>
         <audit>false</audit>
-        <calculation/>
-        <choice>0</choice>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Table</column_label>
+        <column_label>Direction</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>outbound</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -22,15 +27,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>table</element>
+        <element>direction</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="">table_name</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>32</max_length>
-        <name>x_15500_integrate_integration</name>
+        <max_length>40</max_length>
+        <name>x_15500_integrate_action</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -47,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-06-02 19:12:07</sys_created_on>
-        <sys_id>825d32d6873301108bc2da873cbb35d6</sys_id>
+        <sys_created_on>2022-06-21 18:14:54</sys_created_on>
+        <sys_id>2a15282487d011108bc2da873cbb3550</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name>Table</sys_name>
+        <sys_name>Direction</sys_name>
         <sys_package display_value="Integration One" source="x_15500_integrate">8c5c7296873301108bc2da873cbb35f2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Integration One">8c5c7296873301108bc2da873cbb35f2</sys_scope>
-        <sys_update_name>sys_dictionary_x_15500_integrate_integration_table</sys_update_name>
+        <sys_update_name>sys_dictionary_x_15500_integrate_action_direction</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-06-21 18:42:20</sys_updated_on>
+        <sys_updated_on>2022-06-21 18:15:29</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

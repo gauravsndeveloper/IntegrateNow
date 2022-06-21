@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Action" max_length="40" name="x_15500_integrate_action" sizeclass="0" type="collection">
+        <element choice="3" default="outbound" label="Direction" max_length="40" name="direction" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Inbound" sequence="1" value="inbound"/>
+                <element inactive_on_update="false" label="Outbound" sequence="2" value="outbound"/>
+            </choice>
+        </element>
+        <element label="Integration" max_length="32" name="integration" reference="x_15500_integrate_integration" type="reference"/>
         <element label="Name" max_length="40" name="name" type="string"/>
-        <element label="Type" max_length="40" name="type" type="string"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Create" sequence="1" value="create"/>
+                <element inactive_on_update="false" label="Update" sequence="2" value="update"/>
+                <element inactive_on_update="false" label="Query" sequence="3" value="query"/>
+            </choice>
+        </element>
         <element label="URL" max_length="1024" name="url" type="url"/>
+        <index name="index">
+            <element name="integration"/>
+        </index>
     </element>
 </database>
